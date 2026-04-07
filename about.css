@@ -1,0 +1,227 @@
+/*
+  Author: Grace Minielly
+  Purpose: Styles for the About page of Comox Valley Band Choir Festival 2025
+  Last Modified: April 6, 2026
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f7f7f9;
+  color: #222;
+}
+
+div.heading h1 {
+  text-align: center;
+}
+
+div.heading ul {
+  display: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a {
+  color: #174f8f;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #0d2340;
+  color: #fff;
+  padding-block: 0.75rem;
+}
+
+header h1 {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* Mobile Navigation */
+header .heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .heading nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header .heading nav > button {
+  align-self: flex-end;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+header .heading nav ul {
+  display: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .heading nav li {
+  margin-bottom: 0.25rem;
+}
+
+header .heading nav a {
+  color: #fff;
+}
+
+header .heading nav a:hover,
+header .heading nav a:focus-visible {
+  text-decoration: underline;
+}
+
+/* main */
+main {
+  padding: 1.5rem 1.25rem 2.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* white content blocks */
+section {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 10px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.75rem;
+}
+
+/* lists */
+section ul {
+  list-style: none;
+  margin: 0.5rem 0 0 1.25rem;
+  padding-left: 0;
+}
+
+section ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* winter table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  background: white;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+thead {
+  background-color: #c5d1da;
+}
+
+th,
+td {
+  padding: 0.75rem 0.6rem;
+  border-bottom: 1px solid #e5e7ef;
+  text-align: left;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #0d2340;
+  color: #ffffff;
+  padding: 1.25rem 1.5rem 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+footer a {
+  color: #f8f8ff;
+  text-decoration: none;
+}
+
+/* ===== DESKTOP STYLES ===== */
+@media (min-width: 768px) {
+  /* Header Layout */
+  header .heading {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  header .heading nav button {
+    display: none;
+  }
+
+  header .heading ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  header .heading li {
+    margin: 0;
+  }
+
+  header .heading a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+  }
+}

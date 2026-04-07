@@ -1,0 +1,258 @@
+/*
+  Author: Grace Minielly
+  Purpose: Styles for adjudicators page and related layout
+  Last Modified: April 6, 2026
+*/
+
+/* CSS reset and base styles */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f7f7f9;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+/* page container */
+header,
+main,
+footer {
+  padding-inline: 1.5rem;
+}
+
+/* link buttons */
+a {
+  color: #174f8f;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: #0c325d;
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* header styles */
+header {
+  background-color: #0d2340;
+  color: #fff;
+  padding-block: 0.75rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* mobile nav */
+header nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header nav > button {
+  align-self: flex-end;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* menu */
+header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav li {
+  margin-bottom: 0.25rem;
+}
+
+header nav a {
+  color: #fff;
+}
+
+header nav a:hover,
+header nav a:focus-visible {
+  text-decoration: underline;
+}
+
+/* main */
+main {
+  padding-block: 1.5rem 2.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+/* hero */
+section[name="hero-adjudicators"] {
+  margin-bottom: 1rem;
+}
+
+div.adj-hero {
+  margin-top: 30px;
+}
+
+section[name="hero-adjudicators"] h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+/* adjudicator sections */
+section[name="scott-leithead"],
+section[name="wendy-zander"],
+section[name="kathie-van-lare"] {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e0e2ea;
+}
+
+section[name="scott-leithead"] h2,
+section[name="wendy-zander"] h2,
+section[name="kathie-van-lare"] h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.4rem;
+}
+
+/* working heading */
+section[name="working-heading"] {
+  background-color: #c5d1da;
+  margin-top: 1rem;
+  padding: 2rem 1.5rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+}
+
+/* footer */
+footer {
+  background-color: #0d2340;
+  color: #ffffff;
+  padding: 1.25rem 1.5rem 2rem;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+footer a {
+  color: #f8f8ff;
+  text-decoration: none;
+}
+
+/* desktop styles */
+@media (min-width: 768px) {
+  header,
+  main,
+  footer {
+    max-width: 1170px;
+    margin-inline: auto;
+  }
+
+  /* header layout */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    padding-bottom: 50px;
+  }
+
+  header h1 {
+    text-align: left;
+    font-size: 2rem;
+  }
+
+  /* desktop nav */
+  button {
+    display: none;
+  }
+
+  header nav {
+    align-items: center;
+  }
+
+  header nav ul {
+    display: flex;
+    gap: 1rem;
+  }
+
+  header nav li {
+    margin-bottom: 0;
+  }
+
+  /* adjudicator cards row */
+  section[name="scott-leithead"],
+  section[name="wendy-zander"],
+  section[name="kathie-van-lare"] {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.333% - 1rem);
+    margin-right: 1rem;
+  }
+
+  section[name="kathie-van-lare"] {
+    margin-right: 0;
+  }
+
+  /* closing */
+  section[name="hero-adjudicators"],
+  section[name="working-heading"] {
+    max-width: 60rem;
+  }
+
+  footer {
+    text-align: center;
+  }
+}

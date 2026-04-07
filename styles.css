@@ -1,0 +1,435 @@
+/*
+  Author: Grace Minielly
+  Purpose: Global homepage styles for Comox Valley Band Choir Festival 2025
+  Last Modified: April 6, 2026
+*/
+
+/* ===== CSS RESET ===== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== BASE STYLES ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background-color: #f7f7f9;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  letter-spacing: -0.025em;
+  font-weight: 600;
+}
+
+/* ===== PAGE CONTAINER ===== */
+header,
+main,
+footer {
+  padding-inline: 1.5rem;
+}
+
+/* ===== LINKS AND BUTTONS ===== */
+a {
+  color: #174f8f;
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+a:hover,
+a:focus-visible {
+  color: #0c325d;
+  text-decoration: underline;
+}
+
+button {
+  font: inherit;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ===== SLIDESHOW ===== */
+#slideshow {
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  overflow: hidden;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slideshow-container img.active {
+  opacity: 1;
+}
+
+.slideshow-container .prev,
+.slideshow-container .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 12px 16px;
+  cursor: pointer;
+  font-size: 1.4rem;
+  font-weight: bold;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.slideshow-container .prev:hover,
+.slideshow-container .next:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.slideshow-container .prev {
+  left: 15px;
+}
+
+.slideshow-container .next {
+  right: 15px;
+}
+
+/* ===== HEADER ===== */
+header {
+  background-color: #0d2340;
+  color: #fff;
+  padding-block: 0.75rem;
+}
+
+header h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Mobile Navigation */
+header .heading {
+  display: flex;
+  flex-direction: column;
+}
+
+header .heading nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+header .heading nav > button {
+  align-self: flex-end;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+header .heading nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header .heading nav li {
+  margin-bottom: 0.25rem;
+}
+
+header .heading nav a {
+  color: #fff;
+}
+
+header .heading nav a:hover,
+header .heading nav a:focus-visible {
+  text-decoration: underline;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding-block: 1.5rem 2.5rem;
+}
+
+section {
+  margin-bottom: 2.25rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+section p {
+  margin-bottom: 0.75rem;
+}
+
+/* Hero Section */
+section[name="hero-heading"] {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+section[name="hero-heading"] h2 {
+  margin-top: 15px;
+}
+
+/* Intro Section */
+section[name="intro-heading"] {
+  max-width: 60rem;
+  margin-inline: auto;
+  margin-top: 3rem;
+}
+
+/* Schedule Section */
+.schedule-preview-heading {
+  max-width: 60rem;
+  margin-inline: auto;
+  padding: 2rem 0;
+}
+
+.table-content {
+  background-color: #c5d1da;
+  padding: 1.5rem;
+  margin-top: 1.25rem;
+  border-radius: 8px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+th,
+td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #0d2340;
+  color: white;
+  font-weight: 600;
+}
+
+tbody tr:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* Adjudicators Section */
+section[name="adjudicators-heading"] {
+  max-width: 70rem;
+  margin-inline: auto;
+}
+
+section[name="adjudicators-heading"] h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+section[name="adjudicators-heading"] article {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e0e2ea;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+section[name="adjudicators-heading"] article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+section[name="adjudicators-heading"] article h3 {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+/* Visit Section */
+.highlight-box2 {
+  background-color: #c5d1da;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  max-width: 60rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: #f7f7f9;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.image-item {
+  flex: 1 1 calc(33% - 0.66rem);
+  text-align: center;
+  min-width: 180px;
+}
+
+.image-item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.highlight-box2 img {
+  max-width: 300px;
+  display: block;
+  margin: 0 auto 1rem;
+  border-radius: 4px;
+}
+
+section[name="visit-heading"] {
+  clear: both;
+  padding-top: 1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background-color: #0d2340;
+  color: #ffffff;
+  padding: 1.25rem 1.5rem 2rem;
+  font-size: 0.9rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+footer p {
+  margin: 0.35rem 0;
+}
+
+footer a {
+  color: #f8f8ff;
+  text-decoration: none;
+}
+
+/* ===== DESKTOP STYLES ===== */
+@media (min-width: 768px) {
+  /* Header Layout */
+  header .heading {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  header h1 {
+    margin: 0;
+    font-size: 2rem;
+  }
+
+  header .heading nav button {
+    display: none;
+  }
+
+  header .heading ul {
+    display: flex;
+    flex-direction: row;
+    gap: 1.75rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+  }
+
+  header .heading li {
+    margin: 0;
+  }
+
+  header .heading a {
+    color: #fff;
+    font-size: 1rem;
+    text-decoration: none;
+  }
+
+  /* Adjudicators Cards */
+  section[name="adjudicators-heading"] article {
+    display: inline-block;
+    vertical-align: top;
+    width: calc(33.33% - 1rem);
+    margin-right: 1rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e0e2ea;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+    margin-bottom: 30px;
+  }
+
+  section[name="adjudicators-heading"] article:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  }
+
+  section[name="adjudicators-heading"] article:last-of-type {
+    margin-right: 0;
+  }
+
+  /* Footer */
+  footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1.5rem;
+  }
+}
